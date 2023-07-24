@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xyg0sxn.css">
+    <title>Basic Animation</title>
+</head>
+
+<body>
+
+    <header>
+        
+        <nav>
+            <img src="" alt="logo">
+            <a href="index.html">Game</a>
+            <a href="assets.html">Assets</a>
+            <a href="../portal.html">Library</a>
+        </nav>
+    </header>
+
+        <div id="game">
+            <audio id="music" src="sound/heavylight_v1.mp3" loop></audio>
+            <audio id="hit" src="sound/click_explosion.mp3"></audio>
+            <audio id="bling" src="sound/bling.wav"></audio>
+            <audio id="choose" src="sound/choose.wav"></audio>
+            <audio id="explosion" src="sound/explosion.wav"></audio>
+            <audio id="alienDown" src="sound/alienDown.wav"></audio>
+
+            <div id="background" class="background1">
+                <h1 id="title">Alien Aid</h1>
+                <img onclick="soundOnOff()" src="assets/sound-off.svg" id="sound">
+                <div id="mainMenu" class="hidden" onclick="backToMenu()">Main Menu</div>
+                <h3 class="start" onclick="startGame()">START</h3>
+                <div id="happyAlien"></div>
+                <div id="sadAlien" class="hidden"></div>
+                <div id="normalMeteoroid"></div>
+                <div id="happyMeteoroid" class="hidden"></div>
+                <div id="sadMeteoroid" class="hidden"></div>
+
+                <div id="showInstructions" onclick="showInstructions()">Instructions</div>
+                
+                <div id="instructions" class="hidden">
+                    <p>Doomsday is upon Earth and it is up to you to save it! Click the meteoroids to destroy them and
+                        allow aliens to arrive on Earth to aid you.</p>
+                        <div id="backToMenu" onclick="backToMenu()">Back to Menu</div>
+                </div>
+
+                <div class="ui uiHidden">
+                    <div id="health">
+                        <img id="heart" src="assets/heart.svg" alt="">
+                        <div id="lives"> x 3</div>
+                    </div>
+                    <div id="score">
+                        <img id="meteoroid_score" src="assets/meteoroid.svg" alt="">
+                        <div id="points"> x 0</div>
+                    </div>
+                    <div id="timer">
+                        <div class="border">
+                            <div id="timeBar" class="timeBar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="meteoroid" class=""></div>
+                <div id="alien" class=""></div>
+
+                <div id="win" class="winHidden">
+                    <h2>EARTH IS SAVED!</h2>
+                    <div onclick="startGame()" class="play_again">Play Again</div>
+                </div>
+                <div id="lose" class="loseHidden">
+                    <h2>EARTH IS DESTROYED!</h2>
+                    <div onclick="startGame()" class="play_again">Play Again</div>
+                </div>
+
+            </div>
+            <!--background-->
+        </div>
+        <!--game-->
+
+        <script src="script.js"></script>
+    </body>
+
+    
+
+
+
+</html>
